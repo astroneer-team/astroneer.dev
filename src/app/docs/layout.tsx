@@ -1,3 +1,7 @@
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <div className="mx-auto max-w-screen-xl px-4 md:flex md:flex-row">
+      {children}
+    </div>
+  );
 }

@@ -35,7 +35,7 @@ export default function Header() {
             alt="Astroneer.js"
             width={645}
             height={138}
-            className="h-8 block w-fit"
+            className="h-8 block w-fit select-none"
             priority
           />
         </Link>

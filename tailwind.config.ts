@@ -13,6 +13,14 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+    {
+      handler: ({ addVariant }) => {
+        addVariant('child', '& > *');
+        addVariant('child-hover', '& > *:hover');
+      },
+    },
+  ],
 };
 export default config;

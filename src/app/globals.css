@@ -5,3 +5,7 @@
 body {
   @apply bg-black text-white;
 }
+
+.styled-scrollbar {
+  @apply scrollbar-thin scrollbar-thumb-white scrollbar-track-black scrollbar-corner-transparent;
+}
