@@ -1,3 +1,6 @@
+'use client';
+
+import { useAppSelector } from '@/lib/hooks';
 import Link from 'next/link';
 
 export type DocsNavigationItem = {
@@ -14,8 +17,10 @@ export default function DocsSidePanel({
 }: {
   navigation: DocsNavigationItem[];
 }) {
+  const inView = useAppSelector((state) => state.topics.inView);
+
   return (
-    <div className="sticky top-[65px] h-[calc(100vh-65px)] hidden md:flex md:flex-shrink-0 md:flex-col md:justify-between">
+    <div className="sticky top-[65px] left-0 h-[calc(100vh-65px)] hidden md:flex md:flex-shrink-0 md:flex-col md:justify-between">
       <div className="relative overflow-hidden">
         <nav className="styled-scrollbar flex h-[calc(100vh-65px)] flex-col overflow-y-scroll pb-4 pr-2 pt-12">
           <div
@@ -37,7 +42,7 @@ export default function DocsSidePanel({
                       {section.topics.map((topic) => (
                         <li className="my-1.5" key={topic.path}>
                           <Link
-                            className={`text-sm py-1 pl-2 text-left opacity-50 hover:opacity-100 transition-all duration-500`}
+                            className={`${inView.includes(topic.path.split('#').pop() ?? '') ? 'text-primary opacity-100' : 'opacity-50'} text-sm py-1 pl-2 text-left hover:opacity-100 transition-all duration-500`}
                             href={topic.path}
                           >
                             {topic.title}

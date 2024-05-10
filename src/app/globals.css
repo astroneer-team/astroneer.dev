@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --rotate {
+  syntax: '<angle>';
+  initial-value: 132deg;
+  inherits: false;
+}
+
 body {
   @apply bg-black text-white;
 }

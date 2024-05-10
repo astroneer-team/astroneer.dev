@@ -1,6 +1,9 @@
 'use client';
 
+import DocsAdvertisingPanel from '@/components/DocsAdvertisingPanel';
 import DocsSidePanel, { DocsNavigationItem } from '@/components/DocsSidePanel';
+import { clear } from '@/lib/features/topics/topicsSlice';
+import { useAppDispatch } from '@/lib/hooks';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -91,7 +94,7 @@ const navigation: DocsNavigationItem[] = [
   },
   {
     title: 'Support Us',
-    path: '/docs/support#index',
+    path: '/docs/support-us#index',
   },
 ];
 
@@ -99,6 +102,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   const [next, setNext] = useState<DocsNavigationItem | null>(null);
   const [prev, setPrev] = useState<DocsNavigationItem | null>(null);
   const pathname = usePathname();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     const currentIndex = navigation.findIndex((item) =>
@@ -119,7 +123,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
     } else {
       setPrev(null);
     }
-  }, [pathname]);
+
+    dispatch(clear());
+  }, [pathname, dispatch]);
 
   return (
     <>
@@ -127,7 +133,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
       <article className="mt-12 w-full min-w-0 max-w-6xl px-1 md:px-6">
         {children}
         <footer className="py-12 border-t border-solid border-white/10 w-full flex justify-between items-center">
-          <div className="relative">
+          <div className="relative px-6">
             {prev && (
               <Link
                 href={prev.path}
@@ -143,7 +149,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
               </Link>
             )}
           </div>
-          <div className="relative">
+          <div className="relative px-6">
             {next && (
               <Link
                 href={next.path}
@@ -159,6 +165,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
           </div>
         </footer>
       </article>
+      <DocsAdvertisingPanel />
     </>
   );
 }
