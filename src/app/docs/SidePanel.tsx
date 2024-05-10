@@ -42,7 +42,7 @@ export default function DocsSidePanel({
                       {section.topics.map((topic) => (
                         <li className="my-1.5" key={topic.path}>
                           <Link
-                            className={`${inView.includes(topic.path.split('#').pop() ?? '') ? 'text-primary opacity-100' : 'opacity-50'} text-sm py-1 pl-2 text-left hover:opacity-100 transition-all duration-500`}
+                            className={`${inView.includes(topic.path.split('#').pop() ?? '') ? 'text-primary hover:brightness-125 opacity-100' : 'opacity-50'} text-sm py-1 pl-2 text-left hover:opacity-100 transition-all duration-500`}
                             href={topic.path}
                           >
                             {topic.title}

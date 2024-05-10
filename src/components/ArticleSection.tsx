@@ -3,5 +3,5 @@ export default function ArticleSection({
 }: {
   children: React.ReactNode;
 }) {
-  return <section className="py-12 first-of-type:pt-0">{children}</section>;
+  return <section className="py-12">{children}</section>;
 }

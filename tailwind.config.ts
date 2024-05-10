@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#F47340',
+        primary: '#1269F4',
       },
       backgroundImage: {
         'spiral-highlight':
-          'repeating-conic-gradient(from var(--rotate), #F47340 0, transparent 14%, transparent 36%, #F47340 50%)',
+          'repeating-conic-gradient(from var(--rotate), #3b82f6 0, #02112A 14%, #02112A 36%, #3b82f6 50%)',
       },
       animation: {
         'spin-spiral': 'spin-spiral 10s linear infinite',

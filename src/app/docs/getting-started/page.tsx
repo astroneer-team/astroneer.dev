@@ -1,10 +1,11 @@
 import ArticleSection from '@/components/ArticleSection';
 import ArticleTitle from '@/components/ArticleTitle';
 import Code from '@/components/Code';
+import ExternalLink from '@/components/ExternalLink';
 
 export default function Page() {
   return (
-    <div id="index" className="divide-y divide-solid divide-white/10">
+    <div>
       <ArticleSection>
         <ArticleTitle>Introduction</ArticleTitle>
         <p>Welcome to Astroneer.js documentation!</p>
@@ -23,13 +24,9 @@ export default function Page() {
           </p>
           <p>
             Inspired by the simplicity of the{' '}
-            <a
-              href="https://nextjs.org/docs/app/building-your-application/routing/route-handlers"
-              target="_blank"
-              className="text-primary hover:brightness-150 transition-all"
-            >
+            <ExternalLink href="https://nextjs.org/docs/app/building-your-application/routing/route-handlers">
               API routes in Next.js
-            </a>
+            </ExternalLink>
             , Astroneer.js provides a file-based routing system that allows you
             to create routes by simply creating files in the <Code>routes</Code>{' '}
             directory.

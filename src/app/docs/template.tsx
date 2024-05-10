@@ -130,7 +130,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   return (
     <>
       <DocsSidePanel navigation={navigation} />
-      <article className="mt-12 w-full min-w-0 max-w-6xl px-1 md:px-6">
+      <article className="w-full min-w-0 max-w-6xl px-1 md:px-6">
         {children}
         <footer className="py-12 border-t border-solid border-white/10 w-full flex justify-between items-center">
           <div className="relative px-6">
