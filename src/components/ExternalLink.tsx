@@ -9,7 +9,7 @@ export default function ExternalLink({
     <a
       href={href}
       target="_blank"
-      className="text-primary hover:brightness-125 transition-all duration-500"
+      className="text-primary hover:brightness-125 transition-all duration-300"
     >
       {children}
     </a>

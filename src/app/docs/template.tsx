@@ -1,13 +1,13 @@
 'use client';
 
-import DocsAdvertisingPanel from '@/components/DocsAdvertisingPanel';
-import DocsSidePanel, { DocsNavigationItem } from '@/components/DocsSidePanel';
 import { clear } from '@/lib/features/topics/topicsSlice';
 import { useAppDispatch } from '@/lib/hooks';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import DocsSidePanel, { DocsNavigationItem } from './SidePanel';
+import DocsAdvertisingPanel from './AdvertisingPanel';
 
 const navigation: DocsNavigationItem[] = [
   {
