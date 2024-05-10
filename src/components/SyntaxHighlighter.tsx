@@ -2,7 +2,7 @@
 
 import { Fira_Code } from 'next/font/google';
 import React from 'react';
-import { CodeLineProps } from './CodeLine';
+import { CodeLineProps } from './Code';
 
 interface SyntaxHighlighterProps {
   language: string;
@@ -32,7 +32,7 @@ const SyntaxHightlighter: React.FC<SyntaxHighlighterProps> = ({
   language,
   showLineNumber = false,
 }) => {
-  let lineNumber = 0;
+  let lineNumber = 1;
 
   const withLineNumbers = (children: CodeLineNode | CodeLineNode[]) => {
     if (!showLineNumber) return children;
@@ -49,6 +49,8 @@ const SyntaxHightlighter: React.FC<SyntaxHighlighterProps> = ({
     });
   };
 
+  const code = withLineNumbers(children);
+
   return (
     <LinePropsContext.Provider
       value={{
@@ -59,9 +61,9 @@ const SyntaxHightlighter: React.FC<SyntaxHighlighterProps> = ({
     >
       <pre
         style={firaCode.style}
-        className={`language-${language} p-4 text-sm`}
+        className={`language-${language} p-4 text-sm overflow-scroll scrollbar-none`}
       >
-        {withLineNumbers(children)}
+        {code}
       </pre>
     </LinePropsContext.Provider>
   );
