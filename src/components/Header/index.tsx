@@ -27,7 +27,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="px-6 py-4 sticky top-0 left-0 border-b border-solid border-white/10">
+    <header className="px-6 py-4 sticky top-0 left-0 border-b border-solid border-white/10 z-50 backdrop-blur-sm bg-black/70">
       <div className="mx-auto max-w-screen-xl flex gap-12 items-center">
         <Link href="/" className="block w-fit">
           <Image

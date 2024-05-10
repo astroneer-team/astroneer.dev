@@ -59,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <StoreProvider>
-      <html lang="en">
+      <html lang="en" className="styled-scrollbar">
         <body className={inter.className}>
           <Header />
           {children}

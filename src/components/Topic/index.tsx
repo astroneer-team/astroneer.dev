@@ -26,5 +26,9 @@ export default function Topic({
     }
   }, [inView, dispatch, hash]);
 
-  return <div id={hash}>{children}</div>;
+  return (
+    <div ref={ref} id={hash}>
+      {children}
+    </div>
+  );
 }
