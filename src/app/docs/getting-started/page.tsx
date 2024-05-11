@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function GettingStartedArticle() {
   return (
-    <div>
+    <>
       <ArticleSection>
         <ArticleTitle>Introduction</ArticleTitle>
         <div className="space-y-4">
@@ -184,6 +184,6 @@ export default function GettingStartedArticle() {
           </p>
         </div>
       </ArticleSection>
-    </div>
+    </>
   );
 }

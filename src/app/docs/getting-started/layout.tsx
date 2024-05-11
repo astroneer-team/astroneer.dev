@@ -8,10 +8,10 @@ export default function Layout({
   project_structure: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="divide-y divide-white/10">
       {children}
       {installation}
       {project_structure}
-    </>
+    </div>
   );
 }

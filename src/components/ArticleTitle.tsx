@@ -7,7 +7,7 @@ export default function ArticleTitle({
 }) {
   return (
     <h1
-      className={`${subtitle ? 'text-2xl' : 'text-4xl'} font-bold tracking-tight mb-8 last:mb-0`}
+      className={`${subtitle ? 'text-2xl' : 'text-3xl md:text-4xl'} font-bold tracking-tight mb-8 last:mb-0`}
     >
       {children}
     </h1>

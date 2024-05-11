@@ -27,7 +27,7 @@ export default function Topic({
   }, [inView, dispatch, hash]);
 
   return (
-    <div ref={ref} id={hash}>
+    <div ref={ref} id={hash} className="divide-y divide-white/10">
       {children}
     </div>
   );

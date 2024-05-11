@@ -35,11 +35,11 @@ export default function Header() {
             alt="Astroneer.js"
             width={645}
             height={138}
-            className="h-8 block w-fit select-none"
+            className="h-6 sm:h-8 block w-fit select-none"
             priority
           />
         </Link>
-        <nav>
+        <nav className="hidden sm:inline">
           {LINKS.map(({ path, label }) => (
             <Link
               key={path}
