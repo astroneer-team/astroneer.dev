@@ -5,7 +5,7 @@ import ExternalLink from '@/components/ExternalLink';
 import InlineCode from '@/components/InlineCode';
 import Link from 'next/link';
 
-export default function Page() {
+export default function GettingStartedArticle() {
   return (
     <div>
       <ArticleSection>

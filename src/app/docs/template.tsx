@@ -13,7 +13,7 @@ import DocsSidePanel, { DocsNavigationItem } from './SidePanel';
 const navigation: DocsNavigationItem[] = [
   {
     title: 'Getting Started',
-    path: '/docs/getting-started#index',
+    path: '/docs/getting-started',
     topics: [
       {
         title: 'Installation',
@@ -27,7 +27,7 @@ const navigation: DocsNavigationItem[] = [
   },
   {
     title: 'Overview',
-    path: '/docs/overview#index',
+    path: '/docs/overview',
     topics: [
       {
         title: 'First steps',
@@ -36,66 +36,32 @@ const navigation: DocsNavigationItem[] = [
     ],
   },
   {
-    title: 'Security',
-    path: '/docs/security#index',
+    title: 'File Conventions',
+    path: '/docs/file-conventions',
     topics: [
       {
-        title: 'Authentication',
-        path: '/docs/security#authentication',
+        title: 'server.ts',
+        path: '/docs/file-conventions#server-js',
       },
       {
-        title: 'Authorization',
-        path: '/docs/security#authorization',
-      },
-      {
-        title: 'Encryption & Hashing',
-        path: '/docs/security#encryption-hashing',
-      },
-      {
-        title: 'Helmet',
-        path: '/docs/security#helmet',
-      },
-      {
-        title: 'CORS',
-        path: '/docs/security#cors',
+        title: 'Route Files',
+        path: '/docs/file-conventions#route-files',
       },
     ],
   },
   {
-    title: 'CLI',
-    path: '/docs/cli#index',
+    title: 'API Reference',
+    path: '/docs/api-reference',
     topics: [
       {
-        title: 'Overview',
-        path: '/docs/cli#overview',
-      },
-      {
-        title: 'Usage',
-        path: '/docs/cli#usage',
-      },
-      {
-        title: 'Scripts',
-        path: '/docs/cli#scripts',
-      },
-    ],
-  },
-  {
-    title: 'Comunity',
-    path: '/docs/community#index',
-    topics: [
-      {
-        title: 'Contributing',
-        path: '/docs/community#contributing',
-      },
-      {
-        title: 'Code of Conduct',
-        path: '/docs/community#code-of-conduct',
+        title: 'File-Based Routing',
+        path: '/docs/api-reference#file-based-routing',
       },
     ],
   },
   {
     title: 'Support Us',
-    path: '/docs/support-us#index',
+    path: '/docs/support-us',
   },
 ];
 
