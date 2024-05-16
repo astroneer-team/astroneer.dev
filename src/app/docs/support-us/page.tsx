@@ -3,8 +3,10 @@ import ArticleSection from '@/components/ArticleSection';
 import ArticleTitle from '@/components/ArticleTitle';
 import { Metadata, ResolvingMetadata } from 'next';
 
+interface PageProps {}
+
 export async function generateMetadata(
-  {},
+  _: PageProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const resolvedParentMetadata = (await parent) as Metadata;

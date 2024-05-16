@@ -1,8 +1,14 @@
 import { baseUrl } from '@/app/sitemap';
 import { Metadata, ResolvingMetadata } from 'next';
 
+interface LayoutProps {
+  children: React.ReactNode;
+  installation: React.ReactNode;
+  project_structure: React.ReactNode;
+}
+
 export async function generateMetadata(
-  {},
+  _: LayoutProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const resolvedParentMetadata = (await parent) as Metadata;
@@ -32,11 +38,7 @@ export default function Layout({
   children,
   installation,
   project_structure,
-}: {
-  children: React.ReactNode;
-  installation: React.ReactNode;
-  project_structure: React.ReactNode;
-}) {
+}: LayoutProps) {
   return (
     <div className="divide-y divide-white/10">
       {children}

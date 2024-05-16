@@ -1,8 +1,13 @@
 import { baseUrl } from '@/app/sitemap';
 import { Metadata, ResolvingMetadata } from 'next';
 
+interface LayoutProps {
+  children: React.ReactNode;
+  file_based_routing: React.ReactNode;
+}
+
 export async function generateMetadata(
-  {},
+  _: LayoutProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const resolvedParentMetadata = (await parent) as Metadata;
@@ -28,13 +33,7 @@ export async function generateMetadata(
   };
 }
 
-export default function Layout({
-  children,
-  file_based_routing,
-}: {
-  children: React.ReactNode;
-  file_based_routing: React.ReactNode;
-}) {
+export default function Layout({ children, file_based_routing }: LayoutProps) {
   return (
     <>
       {children}

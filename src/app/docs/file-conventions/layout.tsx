@@ -1,8 +1,13 @@
 import { baseUrl } from '@/app/sitemap';
 import { Metadata, ResolvingMetadata } from 'next';
 
+interface LayoutProps {
+  children: React.ReactNode;
+  first_steps: React.ReactNode;
+}
+
 export async function generateMetadata(
-  {},
+  _: LayoutProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const resolvedParentMetadata = (await parent) as Metadata;
@@ -28,13 +33,7 @@ export async function generateMetadata(
   };
 }
 
-export default function Layout({
-  children,
-  first_steps,
-}: {
-  children: React.ReactNode;
-  first_steps: React.ReactNode;
-}) {
+export default function Layout({ children, first_steps }: LayoutProps) {
   return (
     <>
       {children}
