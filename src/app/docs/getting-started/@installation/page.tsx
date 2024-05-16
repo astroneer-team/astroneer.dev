@@ -8,25 +8,7 @@ import InlineCode from '@/components/InlineCode';
 import Topic from '@/components/Topic';
 import Link from 'next/link';
 
-function preloadVersion() {
-  void getCLIVersion();
-}
-
-function getCLIVersion() {
-  return fetch('https://registry.npmjs.org/@astroneer/cli/latest', {
-    next: {
-      tags: ['docs'],
-      revalidate: 60 * 60 * 24,
-    },
-  }).then((res) => res.json());
-}
-
-export default async function InstallationArticle() {
-  preloadVersion();
-  const pkg: {
-    version: string;
-  } = await getCLIVersion();
-
+export default function InstallationArticle() {
   return (
     <Topic hash="installation">
       <ArticleSection>
@@ -87,14 +69,6 @@ export default async function InstallationArticle() {
           </p>
           <p>You should see the following messages in the terminal: </p>
           <CodeViewer title="Terminal" language="bash">
-            <Code>
-              <span className="text-primary">
-                ♦️ Astroneer.js {pkg.version}
-              </span>
-            </Code>
-            <Code>
-              <></>
-            </Code>
             <Code>
               <span className="text-gray-500">INFO</span>
               <span className="text-primary"> ✓ </span>
