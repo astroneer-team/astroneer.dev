@@ -1,4 +1,6 @@
 import Header from '@/components/Header';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -28,27 +30,25 @@ export const metadata: Metadata = {
       name: 'Lucas Larangeira',
       url: 'https://lucaslarangeira.com',
     },
+    {
+      name: 'Astroneer Team',
+      url: 'https://github.com/astroneer-team',
+    },
   ],
   category: 'Web Development',
-  creator: 'Lucas Larangeira',
+  creator: 'Astroneer Team',
   publisher: 'Lucas Larangeira',
   robots: 'index, follow',
-  bookmarks: 'yes',
   classification: 'Web Development',
   openGraph: {
+    title:
+      'Astroneer.js | Next-generation framework for building server-side applications with Node.js & TypeScript',
+    description:
+      'Astroneer.js is a next-generation framework for building server-side applications with Node.js & TypeScript.',
     type: 'website',
     emails: 'team@astroneer.dev',
     images: '/images/og-image.png',
-  },
-  twitter: {
-    creator: '@luketsx_',
-    site: '@astroneerjs',
-  },
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/',
-    },
+    siteName: 'Astroneer.js',
   },
 };
 
@@ -63,6 +63,8 @@ export default function RootLayout({
         <body className={inter.className}>
           <Header />
           {children}
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </StoreProvider>
