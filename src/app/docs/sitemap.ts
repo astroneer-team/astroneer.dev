@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://astroneer.dev';
+const baseUrl = 'https://astroneer.dev/docs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

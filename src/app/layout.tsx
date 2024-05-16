@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     emails: 'team@astroneer.dev',
     images: '/images/og-image.png',
     siteName: 'Astroneer.js',
+    url: new URL('https://astroneer.dev/'),
   },
 };
 
